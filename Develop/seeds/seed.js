@@ -11,7 +11,7 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-
+// create seeds file to show bands on homepage
   for (const project of projectData) {
     await Project.create({
       ...project,
