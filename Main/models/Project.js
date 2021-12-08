@@ -1,8 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// Turn this model into artists
+
 class Project extends Model {}
-// add different properties to artist model
+
 Project.init(
   {
     id: {
