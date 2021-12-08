@@ -5,6 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
+    // Get artists 
     const projectData = await Project.findAll({
       include: [
         {
@@ -26,7 +27,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// Route to get to artist
 router.get('/project/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
