@@ -23,8 +23,8 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
+    artist_bio: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     user_id: {
