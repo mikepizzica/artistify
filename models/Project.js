@@ -15,15 +15,16 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
-    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
     artist_bio: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    artist_img: {
       type: DataTypes.STRING,
       allowNull: false,
     },
