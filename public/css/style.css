@@ -1,3 +1,4 @@
+
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
@@ -17,13 +18,9 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-}
 
 img {
   height: auto;
   width: 600px;
 }
+
