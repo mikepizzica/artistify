@@ -1,2 +1,4 @@
-DROP DATABASE IF EXISTS artistift_db;
-CREATE DATABASE artistift_db;
+
+DROP DATABASE IF EXISTS artistify_db;
+CREATE DATABASE artistify_db;
+

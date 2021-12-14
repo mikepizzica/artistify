@@ -17,3 +17,10 @@ header, .project:not(:last-child) {
   color: #065b83;
   text-decoration: underline;
 }
+
+
+img {
+  height: auto;
+  width: 600px;
+}
+
