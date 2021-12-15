@@ -1,21 +1,21 @@
-<div class="row">
-  <div class="col-auto">
+<div class="col-md-auto">
+  <div>
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class="">
+  <div class="">
     <h3>Create a New Artist:</h3>
 
-    <form class="form new-project-form">
+    <form class="form new-project-form width-40">
       <div class="form-group">
-        <label for="project-name">Artist Name:</label>
+        <label for="project-name ">Artist Name:</label>
         <input class="form-input" type="text" id="project-name" name="project-name" />
       </div>
       <div class="form-group">
         <label for="artist-bio">Artist Bio:</label>
-        <input class="form-input" type="text" id="artist-bio" name="artist-bio" />
+        <input class="form-input width-40" type="text" id="artist-bio" name="artist-bio" />
       </div>
       <div>
         {{!-- cloudinary upload widget magic --}}
@@ -48,7 +48,7 @@
   </div>
 
   {{#if projects.length}}
-  <div class="col-md-6 project-list">
+  <div class="col-md-6 project-list flex-col">
     <h3>Current Projects:</h3>
 
     {{#each projects as |project|}}
