@@ -1,3 +1,7 @@
+body{
+  background-color: white;
+
+}
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
@@ -17,13 +21,27 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-}
 
 img {
   height: auto;
   width: 600px;
+}
+
+.post{
+  border-style: dashed;
+}
+
+.plane {
+  height: auto;
+  width:  auto;
+  border: 1px solid black;
+  border-radius: 11px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Times, serif;
+  font-size: 18pt;
+  color: blue;
+  background-color: red;
+  transform: 2s;
+  backface-visibility: hidden;
 }
