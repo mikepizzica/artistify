@@ -11,22 +11,26 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">Artistify</a>
+  <div class="flex-column justify-space-around ">
+    <header class="flex  justify-around align-center p-2 ">
+      <h1 class ="stage">
+        <a href="/" class="plane 1">Artistify</a>
+        <a href="/" class="plane 2">Artistify</a>
+        <a href="/" class="plane 3">Artistify</a>
+        <a href="/" class="plane 4">Artistify</a>
       </h1>
-      <nav>
+      <nav class="flex sm:justify-center space-x-4 flex-auto w-64">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login" class= "flex auto w-32">login</a>
         {{/if}}
-      </nav>
+        
+      </nav >
     </header>
-    <main class="container container-fluid mt-5">
+    <main class=" mx-20 py-10 border-black outline-black border-none rounded-lg box-shadow ">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
