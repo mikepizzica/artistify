@@ -5,15 +5,15 @@
     <form class="form edit-project-form">
       <div class="form-group">
         <label for="project-name">Artist Name:</label>
-        <input class="form-input" type="text" id="project-name" value={{name}} name="project-name" />
+        <textarea class="form-input" type="text" id="project-name" name="project-name">{{name}}</textarea>
       </div>
       <div class="form-group">
         <label for="artist-bio">Artist Bio:</label>
-        <input class="form-input" type="text" id="artist-bio" value={{artist_bio}} name="artist-bio" />
+        <textarea class="form-input" type="text" id="artist-bio" name="artist-bio">{{artist_bio}}</textarea>
       </div>
       <div class="form-group">
         <label for="spotify-embed-code">Spotify Embed Code:</label>
-        <input class="form-input" type="text" id="spotify-embed-code" value={{spotify_embed_code}} name="spotify-embed-code" />
+        <textarea class="form-input" type="text" id="spotify-embed-code" name="spotify-embed-code">{{spotify_embed_code}}</textarea>
         <a href="https://developer.spotify.com/documentation/widgets/generate/embed/" target="_blank">^Where do I find this? Documentation link</a>
       </div>
       <div>
