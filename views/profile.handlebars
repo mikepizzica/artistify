@@ -1,16 +1,9 @@
-<div class="col-md-auto">
-  <div>
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
-
-<div class="">
-  <div class="">
-    <h3>Create a New Artist:</h3>
-
+<div class="mt-5" id="project-page">
+  <div class="" id="project-input">
+    <h3 class="text-5xl">Create a New Artist:</h3>
     <form class="form new-project-form width-40">
       <div class="form-group">
-        <label for="project-name ">Artist Name:</label>
+        <label for="project-name">Artist Name:</label>
         <input class="form-input" type="text" id="project-name" name="project-name" />
       </div>
       <div class="form-group">
@@ -61,21 +54,19 @@
   </div>
 
   {{#if projects.length}}
-  <div class="col-md-6 project-list flex-col">
-    <h3>Current Projects:</h3>
+  <div class="col-md-6 project-list flex-col" id="project-list">
+    <h3 class="mb-2 text-5xl">Current Projects:</h3>
 
     {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
+    <section class="row mb-8">
+      <div class="col-md-8 pb-2">
         <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-8">
+        <button class="btn btn-sm btn-danger"><a href="/edit/{{project.id}}">Edit</a></button>
         <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger"><a href="/edit/{{project.id}}">Edit</a></button>
-      </div>
-    </div>
+    </section>
     {{/each}}
   </div>
   {{/if}}

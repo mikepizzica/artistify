@@ -12,7 +12,7 @@
 
 <body class = "bg-red-100">
   <div class="flex-column justify-space-around font-medium px-3 py-2 rounded-lg hover:text-gray-900">
-    <header class="flex  justify-around align-center p-2 wrapper">
+    <header class="flex justify-around align-center p-2 wrapper">
       <h1 class ="stage">
         <div class = "cube">
         <a href="/" class="face face_1">Artistify</a>
@@ -24,10 +24,10 @@
       <nav class="bg-white shadow-lg text-center">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile" class="font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">profile</a> |
+        <a href="/profile" class="font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">{{name}}'s profile</a> |
         <button class="no-button font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900" id="logout">logout</button>
         {{else}}
-        <a href="/login" class= "flex end text-center">login</a>
+        <a href="/login"><button class="no-button font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">login</button></a>
         {{/if}}
         
       </nav >

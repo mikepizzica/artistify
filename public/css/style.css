@@ -89,3 +89,21 @@ img {
 #twitter {
   height:100px;
 }
+
+#project-page {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+}
+
+#project-input {
+  /* background-color: green; */
+}
+
+#project-list {
+  /* background-color: white; */
+}
+
+#project-list > section {
+  /* background-color: lightblue; */
+}
