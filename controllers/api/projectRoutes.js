@@ -16,6 +16,26 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+// update route
+router.put('/:id', withAuth, async (req, res) => {
+  try {
+    const projectData = await Project.update({
+      name: req.body.name,
+      artist_bio: req.body.artist_bio,
+      spotify_embed_code: req.body.spotify_embed_code,
+      artist_img: req.body.artist_img
+    },
+    {where: {
+      id: req.params.id,
+    }}
+    );
+
+    res.status(200).json(projectData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const projectData = await Project.destroy({

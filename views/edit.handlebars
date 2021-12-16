@@ -1,31 +1,25 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
-
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Artist:</h3>
+    <h3>Edit Artist:</h3>
 
-    <form class="form new-project-form">
+    <form class="form edit-project-form">
       <div class="form-group">
         <label for="project-name">Artist Name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+        <input class="form-input" type="text" id="project-name" value={{name}} name="project-name" />
       </div>
       <div class="form-group">
         <label for="artist-bio">Artist Bio:</label>
-        <input class="form-input" type="text" id="artist-bio" name="artist-bio" />
+        <input class="form-input" type="text" id="artist-bio" value={{artist_bio}} name="artist-bio" />
       </div>
       <div class="form-group">
         <label for="spotify-embed-code">Spotify Embed Code:</label>
-        <input class="form-input" type="text" id="spotify-embed-code" name="spotify-embed-code" />
+        <input class="form-input" type="text" id="spotify-embed-code" value={{spotify_embed_code}} name="spotify-embed-code" />
         <a href="https://developer.spotify.com/documentation/widgets/generate/embed/" target="_blank">^Where do I find this? Documentation link</a>
       </div>
       <div>
         {{!-- cloudinary upload widget magic --}}
         <label for="project-img">Artist Image:</label>
-        <button id="upload_widget" class="cloudinary-button btn hover:bg-green-600 hover:text-green-200 bg-red-100 text-white-700 mx-5 my-10 px-6 py-2 rounded-lg">Upload files</button>
+        <button id="upload_widget" class="cloudinary-button btn hover:bg-green-599 hover:text-green-200 bg-red-100 text-white-700 mx-5 my-10 px-6 py-2 rounded-lg">Upload files</button>
         <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>  
         <script type="text/javascript">  
         var myWidget = cloudinary.createUploadWidget({
@@ -47,33 +41,12 @@
         </script>
       </div>
       <div class="form-group">
-        <input class="form-input" type="hidden" id="artist-img" name="artist-img" value=""/>
+        <input class="form-input" type="hidden" id="artist-img" name="artist-img" value={{artist_img}}/>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn hover:bg-green-600 hover:text-green-200 bg-red-100 text-white-700 mx-5 my-10 px-6 py-2 rounded-lg">Create</button>
+        <button type="submit" class="btn hover:bg-green-600 hover:text-green-200 bg-red-100 text-white-700 mx-5 my-10 px-6 py-2 rounded-lg" id={{id}}>Edit</button>
       </div>
     </form>
   </div>
 
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger"><a href="/edit/{{project.id}}">Edit</a></button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
-
-<script src="./js/profile.js"></script>
+<script src="/js/edit.js"></script>
