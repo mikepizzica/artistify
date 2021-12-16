@@ -10,27 +10,29 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <div class="flex-column justify-space-around ">
-    <header class="flex  justify-around align-center p-2 ">
+<body class = "bg-red-100">
+  <div class="flex-column justify-space-around font-medium px-3 py-2 rounded-lg hover:text-gray-900">
+    <header class="flex  justify-around align-center p-2 wrapper">
       <h1 class ="stage">
-        <a href="/" class="plane 1">Artistify</a>
-        <a href="/" class="plane 2">Artistify</a>
-        <a href="/" class="plane 3">Artistify</a>
-        <a href="/" class="plane 4">Artistify</a>
+        <div class = "cube">
+        <a href="/" class="face face_1">Artistify</a>
+        <a href="/" class="face face_2">Artistify</a>
+        <a href="/" class="face face_3">Artistify</a>
+        <a href="/" class="face face_4">Artistify</a>
+        </div>
       </h1>
-      <nav class="flex sm:justify-center space-x-4 flex-auto w-64">
+      <nav class="bg-white shadow-lg text-center">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/profile" class="font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">profile</a> |
+        <button class="no-button font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900" id="logout">logout</button>
         {{else}}
-        <a href="/login" class= "flex auto w-32">login</a>
+        <a href="/login" class= "flex end text-center">login</a>
         {{/if}}
         
       </nav >
     </header>
-    <main class=" mx-20 py-10 border-black outline-black border-none rounded-lg box-shadow ">
+    <main class="  p-10">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
