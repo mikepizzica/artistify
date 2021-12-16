@@ -17,6 +17,11 @@
         <label for="artist-bio">Artist Bio:</label>
         <input class="form-input width-40" type="text" id="artist-bio" name="artist-bio" />
       </div>
+      <div class="form-group">
+        <label for="spotify-embed-code">Spotify Embed Code:</label>
+        <input class="form-input" type="text" id="spotify-embed-code" name="spotify-embed-code" />
+        <a href="https://developer.spotify.com/documentation/widgets/generate/embed/" target="_blank">^Where do I find this? Documentation link</a>
+      </div>
       <div>
         {{!-- cloudinary upload widget magic --}}
         <label for="project-img">Artist Image:</label>
@@ -25,7 +30,10 @@
         <script type="text/javascript">  
         var myWidget = cloudinary.createUploadWidget({
           cloudName: 'doetzelhn', 
-          uploadPreset: 'bgdwrnsi'}, (error, result) => { 
+          uploadPreset: 'bgdwrnsi',
+          sources: [ 'local', 'image_search', 'instagram', 'facebook', 'url', 'camera'],
+          googleApiKey: 'AIzaSyCZqq4TeSsr3D4FuyKeLxgcV-cmgKwA-no' }, 
+          (error, result) => { 
             if (!error && result && result.event === "success") { 
               console.log('Done! Here is the image info: ', result.info.url); 
               document.getElementById("artist-img").value = result.info.url;
@@ -58,6 +66,9 @@
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger"><a href="/edit/{{project.id}}">Edit</a></button>
       </div>
     </div>
     {{/each}}
