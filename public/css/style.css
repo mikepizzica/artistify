@@ -85,3 +85,7 @@ img {
 .cube { transform: translateZ(180px); 
   transform: translateX(90);}
 .cube { transition: 5s; }
+
+#twitter {
+  height:100px;
+}
