@@ -49,6 +49,20 @@ router.get('/project/:id', async (req, res) => {
   }
 });
 
+router.get('/edit/:id', async (req, res) => {
+  try {
+    const projectData = await Project.findByPk(req.params.id)
+    const project = projectData.get({ plain: true });
+    console.log(project)
+    res.render('edit', {
+      ...project,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
