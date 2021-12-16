@@ -5,11 +5,12 @@ const newFormHandler = async (event) => {
   const artist_bio = document.querySelector('#artist-bio').value.trim();
   const spotify_embed_code = document.querySelector('#spotify-embed-code').value.trim();
   const artist_img = document.querySelector('#artist-img').value.trim();
+  const twitter_embed_code = document.querySelector('#twitter-embed-code').value.trim();
 
-  if (name && artist_bio && spotify_embed_code && artist_img) {
+  if (name && artist_bio && spotify_embed_code && artist_img && twitter_embed_code) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, artist_bio, spotify_embed_code, artist_img }),
+      body: JSON.stringify({ name, artist_bio, spotify_embed_code, artist_img, twitter_embed_code }),
       headers: {
         'Content-Type': 'application/json',
       },

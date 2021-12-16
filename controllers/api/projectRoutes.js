@@ -23,7 +23,8 @@ router.put('/:id', withAuth, async (req, res) => {
       name: req.body.name,
       artist_bio: req.body.artist_bio,
       spotify_embed_code: req.body.spotify_embed_code,
-      artist_img: req.body.artist_img
+      artist_img: req.body.artist_img,
+      twitter_embed_code: req.body.twitter_embed_code
     },
     {where: {
       id: req.params.id,
