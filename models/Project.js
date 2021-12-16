@@ -24,6 +24,10 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    spotify_embed_code: {
+      type: DataTypes.STRING(1000),
+      allowNull: false,
+    },
     artist_img: {
       type: DataTypes.STRING,
       allowNull: false,
