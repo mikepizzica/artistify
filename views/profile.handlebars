@@ -1,23 +1,23 @@
 <div id="profile-page">
   <div class="" id="profile-input">
-    <h3 class="text-5xl">Create a New Artist:</h3>
+    <h3 class="text-5xl">Create a New Project:</h3>
     <form class="form new-project-form width-40">
       <div class="form-group">
         <label for="project-name">Artist Name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+        <textarea class="form-input" type="text" id="project-name" name="project-name"></textarea>
       </div>
       <div class="form-group">
         <label for="artist-bio">Artist Bio:</label>
-        <input class="form-input width-40" type="text" id="artist-bio" name="artist-bio" />
+        <textarea class="form-input" type="text" id="artist-bio" name="artist-bio"></textarea>
       </div>
       <div class="form-group">
         <label for="spotify-embed-code">Spotify Embed Code:</label>
-        <input class="form-input" type="text" id="spotify-embed-code" name="spotify-embed-code" />
+        <textarea class="form-input" type="text" id="spotify-embed-code" name="spotify-embed-code"></textarea>
         <a href="https://developer.spotify.com/documentation/widgets/generate/embed/" target="_blank">^Where do I find this? Documentation link</a>
       </div>
       <div class="form-group">
         <label for="twitter-embed-code">Twitter Embed Code:</label>
-        <input class="form-input" type="text" id="twitter-embed-code" name="twitter-embed-code" />
+        <textarea class="form-input" type="text" id="twitter-embed-code" name="twitter-embed-code" /></textarea>
         <a href="https://help.twitter.com/en/using-twitter/embed-twitter-feed" target="_blank">^Where do I find this? Documentation link</a>
       </div>
       <div>
@@ -48,23 +48,23 @@
         <input class="form-input" type="hidden" id="artist-img" name="artist-img" value=""/>
       </div>
       <div class="form-group">
-        <button type="submit" class=" w-16 h-10 mx-2 transition ease-in-out delay-150 bg-green-400 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ">Create!</button>
+        <button type="submit" class="btn hover:bg-green-600 hover:text-green-200 bg-red-100 text-white-700 mx-5 my-10 px-6 py-2 rounded-lg text-5xl">Create!</button>
       </div>
     </form>
   </div>
 
   {{#if projects.length}}
   <div class="col-md-6 project-list flex-col" id="profile-list">
-    <h3 class="mb-2 text-5xl">Current Projects:</h3>
+    <h3 class="mb-11 text-5xl">Existing Projects:</h3>
 
     {{#each projects as |project|}}
     <section class="row mb-8">
-      <div class="col-md-8 pb-2">
+      <div class="col-md-8 pb-2 text-xl">
         <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
       </div>
       <div class="col-md-8">
         <button class="btn btn-sm btn-danger"><a href="/edit/{{project.id}}">Edit</a></button>
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger delete-button" data-id="{{project.id}}">DELETE</button>
       </div>
     </section>
     {{/each}}

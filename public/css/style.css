@@ -86,6 +86,7 @@ img {
   transform: translateX(90);}
 .cube { transition: 5s; }
 
+/* stylings for the profile & edit page */
 #profile-page {
   /* background-color: red; */
   display: flex;
@@ -104,6 +105,17 @@ img {
   /* background-color: lightblue; */
 }
 
+.form-group > label {
+  position: relative;
+  top: 15px;
+}
+
+.form-group > a {
+  position: relative;
+  bottom: 13px;
+}
+
+/* stylings for the project page */
 #project-page {
   display: flex;
   justify-content: space-around;

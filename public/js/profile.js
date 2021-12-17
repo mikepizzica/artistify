@@ -25,6 +25,9 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
+  var result = confirm("Are you sure you want to delete this project?");
+  if(!result){}
+  else{
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
@@ -39,11 +42,13 @@ const delButtonHandler = async (event) => {
     }
   }
 };
+}
 
 document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+  .querySelectorAll('.delete-button')
+  .forEach(elem => elem
+  .addEventListener('click', delButtonHandler));
