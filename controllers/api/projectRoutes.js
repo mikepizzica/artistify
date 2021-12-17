@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// 
+// route used to post new projects
 router.post('/', withAuth, async (req, res) => {
   try {
     const newProject = await Project.create({
@@ -17,7 +17,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-// update route
+// route used to update existing projects
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const projectData = await Project.update({
@@ -38,6 +38,7 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 });
 
+// route used to delete existing projects
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const projectData = await Project.destroy({
