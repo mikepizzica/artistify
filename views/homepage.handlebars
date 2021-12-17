@@ -1,7 +1,7 @@
 <!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
 <div class="columns-1 mb-4 project box-decoration-clone sticky top-0">
-  <img class="inline-block h-12 w-12 rounded-full ring-2 ring-black" src="{{artist_img}}" alt="{{name}}"/>
+  <img class="inline-block h-12 w-12 rounded-full ring-2 ring-black object-cover" src="{{artist_img}}" alt="{{name}}"/>
   <div class="columns-1-md-5">
     <h2>
       <a class="font-semibold hover:text-slate-900 text-4xl underline" href="/project/{{project.id}}">{{project.name}}</a>
