@@ -86,24 +86,41 @@ img {
   transform: translateX(90);}
 .cube { transition: 5s; }
 
-#twitter {
-  height:100px;
-}
-
-#project-page {
+#profile-page {
   /* background-color: red; */
   display: flex;
   justify-content: space-around;
 }
 
-#project-input {
+#profile-input {
   /* background-color: green; */
 }
 
-#project-list {
+#profile-list {
   /* background-color: white; */
 }
 
-#project-list > section {
+#profile-list > section {
   /* background-color: lightblue; */
+}
+
+#project-page {
+  display: flex;
+  justify-content: space-around;
+}
+
+#project-twitter {
+  height:fit-content;
+}
+
+#project-info > img {
+  margin: auto;
+}
+
+#project-spotify {
+
+}
+
+#background-concert {
+  width:100%;
 }

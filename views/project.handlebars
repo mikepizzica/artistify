@@ -1,12 +1,22 @@
-<div class="text-center grid gap-4 grid-cols-3 grid-rows-3 bg-repeat-x bg-fixed bg-gradient-to-t bg-bottom" style="background-image: url(https://www.pngall.com/wp-content/uploads/4/Concert.png)">
-  <h2>{{name}}</h2>
-  <p>{{artist_bio}}</p>
-  <img class = "aspect-auto h-fit" src={{artist_img}} alt={{name}}>
-  <div>
-    {{{spotify_embed_code}}}
+{{!-- <div id="background-concert" style="background-image: url(https://www.pngall.com/wp-content/uploads/4/Concert.png)"> --}}
+
+  <div id="project-page">
+    <div id="twitter">
+      {{{twitter_embed_code}}}
+    </div>
+
+    <div class="px-2" id="project-info">
+    <h2 class="text-5xl text-center">{{name}}</h2>
+    <p class="text-center">{{artist_bio}}</p>
+    <img src={{artist_img}} alt={{name}}>
+    <p class="text-center">Created by {{user.name}} on {{format_date date_created}}</p>
+    </div>
+
+    <div id="spotify">
+      {{{spotify_embed_code}}}
+    </div>
   </div>
-  <div id="twitter">
-    {{{twitter_embed_code}}}
-  </div>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-</div>
+
+  <img id="background-concert" src="https://res.cloudinary.com/doetzelhn/image/upload/v1639700698/artistify-project/concert-background_ushwez.png" alt="concert crowd">
+  
+{{!-- </div> --}}
