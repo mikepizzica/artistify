@@ -24,7 +24,7 @@
       <nav class="bg-white shadow-lg text-center">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile" class="font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">{{name}}'s profile</a> |
+        <a href="/profile" class="font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">profile</a> |
         <button class="no-button font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900" id="logout">logout</button>
         {{else}}
         <a href="/login"><button class="no-button font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">login</button></a>
@@ -32,7 +32,7 @@
         
       </nav >
     </header>
-    <main class="  p-10">
+    <main class="pt-20 p-10">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
