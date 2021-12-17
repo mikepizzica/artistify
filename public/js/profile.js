@@ -7,6 +7,7 @@ const newFormHandler = async (event) => {
   const artist_img = document.querySelector('#artist-img').value.trim();
   const twitter_embed_code = document.querySelector('#twitter-embed-code').value.trim();
 
+  // accept user input and post to the DB
   if (name && artist_bio && spotify_embed_code && artist_img && twitter_embed_code) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
@@ -24,6 +25,7 @@ const newFormHandler = async (event) => {
   }
 };
 
+// confirm delete and then remove from DB
 const delButtonHandler = async (event) => {
   var result = confirm("Are you sure you want to delete this project?");
   if(!result){}

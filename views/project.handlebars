@@ -1,22 +1,22 @@
-{{!-- <div id="background-concert" style="background-image: url(https://www.pngall.com/wp-content/uploads/4/Concert.png)"> --}}
-
-  <div id="project-page">
-    <div id="twitter">
-      {{{twitter_embed_code}}}
-    </div>
-
-    <div class="px-2" id="project-info">
-    <h2 class="text-5xl text-center">{{name}}</h2>
-    <p class="text-center">{{artist_bio}}</p>
-    <img src={{artist_img}} alt={{name}}>
-    <p class="text-center">Created by {{user.name}} on {{format_date date_created}}</p>
-    </div>
-
-    <div id="spotify">
-      {{{spotify_embed_code}}}
-    </div>
+<div id="project-page">
+  {{!-- twitter stuff here --}}
+  <div id="twitter">
+    {{{twitter_embed_code}}}
   </div>
 
-  <img id="background-concert" src="https://res.cloudinary.com/doetzelhn/image/upload/v1639700698/artistify-project/concert-background_ushwez.png" alt="concert crowd">
-  
-{{!-- </div> --}}
+  {{!-- name, bio, creation info, and cloudinary image stuff here --}}
+  <div class="px-2" id="project-info">
+  <h2 class="text-5xl text-center">{{name}}</h2>
+  <p class="text-center">{{artist_bio}}</p>
+  <img src={{artist_img}} alt={{name}}>
+  <p class="text-center">Created by {{user.name}} on {{format_date date_created}}</p>
+  </div>
+
+  {{!-- spotify stuff here --}}
+  <div id="spotify">
+    {{{spotify_embed_code}}}
+  </div>
+</div>
+
+{{!-- image for bottom of page --}}
+<img id="background-concert" src="https://res.cloudinary.com/doetzelhn/image/upload/v1639761008/artistify-project/concert-background-new_xf0uje.png" alt="concert crowd">
