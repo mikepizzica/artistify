@@ -33,9 +33,9 @@ nav {
   text-decoration: underline;
 }
 
-img {
-  height: 200px;
-  width: 200px;
+#homepage-image {
+  height: auto;
+  width: 70px;
 }
 
 .post {
