@@ -2,7 +2,6 @@
 .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
-
 .no-button {
   background: none;
   border: none;
@@ -97,24 +96,15 @@ img {
 }
 
 #profile-list > section {
-  /* background-color: lightblue; */
+  /* background-color: blue; */
 }
 
 #profile-input-cloudinary {
   margin-top: 25px;
 }
-.artist_img{
-  position: relative;
-  left: 44.75%;
 
-}
 
-.background_img{
-  position: relative;
-  top: 25%;
-}
-
-.bands.bands:nth-child(2n){
+.bands:nth-child(2n){
   background-color: #70C3FF;
 }
 
