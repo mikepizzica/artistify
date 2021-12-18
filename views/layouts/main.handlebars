@@ -14,31 +14,36 @@
   <div class="flex-column justify-space-around font-medium px-3 py-2 rounded-lg hover:text-gray-900">
     <header class="flex justify-around align-center p-2 wrapper">
       <h1 class ="stage">
-        <div class = "cube">
-        <a href="/" class="face face_1">Artistify</a>
-        <a href="/" class="face face_2">Artistify</a>
-        <a href="/" class="face face_3">Artistify</a>
-        <a href="/" class="face face_4">Artistify</a>
+        <div class ="cube bg-red-100">
+        <a href="/" class="face face_1 text-black hover:text-gray-600 ">Artistify</a>
+        <a href="/" class="face face_2 text-greem hover:text-gray-600">Artistify</a>
+        <a href="/" class="face face_3 text-yellow hover:text-gray-600">Artistify</a>
+        <a href="/" class="face face_4 text-blue hover:text-gray-600">Artistify</a>
         </div>
       </h1>
-      <nav class="bg-white shadow-lg text-center">
+      <nav class="bg-white shadow-lg text-center row-auto">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile" class="font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">profile</a> |
         <button class="no-button font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900" id="logout">logout</button>
         {{else}}
+
         <a href="/login"><button class="no-button font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">login</button></a>
         {{/if}}
         
       </nav >
     </header>
-    <main class="pt-20 p-10">
+
+    <div class=" container ">
+    <main class=" p-5 columns flex flex-col justify-center relative left-96">
+
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
       
     </footer>
+    </div>
   </div>
 
   <!-- Render script for logged in users only -->
