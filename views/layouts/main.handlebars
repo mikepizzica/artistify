@@ -6,19 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artistify</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body class = "bg-red-100">
+<body class = "bg-red-100 body">
   <div class="flex-column justify-space-around font-medium px-3 py-2 rounded-lg hover:text-gray-900">
     <header class="flex justify-around align-center p-2 wrapper">
       <h1 class ="stage">
-        <div class ="cube bg-red-100">
-        <a href="/" class="face face_1 text-black hover:text-gray-600 ">Artistify</a>
-        <a href="/" class="face face_2 text-greem hover:text-gray-600">Artistify</a>
-        <a href="/" class="face face_3 text-yellow hover:text-gray-600">Artistify</a>
-        <a href="/" class="face face_4 text-blue hover:text-gray-600">Artistify</a>
+        <div class ="cube bg-red-100 font-mono text-base rounded-none">
+        <a href="/" class="face face_1 bg-white hover:text-yellow-600 rounded-none border-2 border-black">Artistify</a>
+        <a href="/" class="face face_2 bg-white hover:text-blue-600 rounded-none border-2 border-black">Artistify</a>
+        <a href="/" class="face face_3 bg-white hover:text-green-600 rounded-none border-2 border-black">Artistify</a>
+        <a href="/" class="face face_4 bg-white hover:text-pink-600 rounded-none border-2 border-black">Artistify</a>
         </div>
       </h1>
       <nav class="bg-white shadow-lg text-center row-auto">
@@ -33,15 +36,12 @@
       </nav >
     </header>
 
-    <div class=" container ">
-    <main class=" p-5 columns flex flex-col justify-center relative left-96">
+    <div class=" container" >
+    <main class=" p-5 columns flex flex-col justify-center">
 
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer>
-      
-    </footer>
     </div>
   </div>
 
