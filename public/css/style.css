@@ -1,7 +1,15 @@
 /* styling for the homepage */
-.project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+#body1{
+  background-image: url("https://www.nicepng.com/png/detail/12-123746_cartoon-microphone-png-microphone-clipart-transparent.png");
+  background-repeat: repeat;
 }
+
+.bands {
+  background-color: #cffafe;
+  border: gray;
+  border-style: groove;
+  }
+
 .no-button {
   background: none;
   border: none;
@@ -105,19 +113,6 @@ img {
   margin-top: 25px;
 }
 
-
-.bands:nth-child(2n){
-  border-style: dashed;
-  color: #065b83;
- 
-}
-
-.bands:nth-child(2n-1){
-background-color: #cffafe;
-border: gray;
-border-style: groove;
-}
-
 .form-group > label {
   position: relative;
   top: 15px;
@@ -151,9 +146,3 @@ border-style: groove;
 #background-concert {
   width:100%;
 }
-
-#body1{
-  background-image: url("https://www.nicepng.com/png/detail/12-123746_cartoon-microphone-png-microphone-clipart-transparent.png");
-  background-repeat: repeat;
-  font-family: 'Permanent Marker', cursive;
-} 
