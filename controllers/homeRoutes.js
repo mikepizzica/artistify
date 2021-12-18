@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+// route used for the homepage
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
@@ -27,6 +28,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// route used for the individual projects
 router.get('/project/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
@@ -49,6 +51,7 @@ router.get('/project/:id', async (req, res) => {
   }
 });
 
+// route used for editing individual project
 router.get('/edit/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id)
@@ -63,7 +66,8 @@ router.get('/edit/:id', async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
+// route used to create the profile page
+// use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -83,8 +87,9 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+// route used to create the login page
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
+  // if the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/profile');
     return;

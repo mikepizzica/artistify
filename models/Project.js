@@ -32,6 +32,10 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    twitter_embed_code: {
+      type: DataTypes.STRING(1000),
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
