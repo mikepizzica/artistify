@@ -27,7 +27,6 @@ img {
 }
 
 /* 3d animation styling below */
-
 .stage {
   perspective: 1400px; 
     display:flex;
@@ -58,6 +57,8 @@ img {
   position: absolute;
   width: 100px;
   height: 100px;
+  color: #70C3FF;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .face_1 {
@@ -106,15 +107,16 @@ img {
 
 
 .bands:nth-child(2n){
-  background-color: #70C3FF;
+  border-style: dashed;
+  color: #065b83;
+ 
 }
 
 .bands:nth-child(2n-1){
-background-color: white;
+background-color: #cffafe;
+border: gray;
+border-style: groove;
 }
-
-
-
 
 .form-group > label {
   position: relative;
@@ -143,10 +145,15 @@ background-color: white;
 }
 
 #project-spotify {
-  /* background-color: red; */
+ background-color: red;
 }
 
 #background-concert {
   width:100%;
->>>>>>> main
 }
+
+#body1{
+  background-image: url("https://www.nicepng.com/png/detail/12-123746_cartoon-microphone-png-microphone-clipart-transparent.png");
+  background-repeat: repeat;
+  font-family: 'Permanent Marker', cursive;
+} 
