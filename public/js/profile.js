@@ -5,11 +5,13 @@ const newFormHandler = async (event) => {
   const artist_bio = document.querySelector('#artist-bio').value.trim();
   const spotify_embed_code = document.querySelector('#spotify-embed-code').value.trim();
   const artist_img = document.querySelector('#artist-img').value.trim();
+  const twitter_embed_code = document.querySelector('#twitter-embed-code').value.trim();
 
-  if (name && artist_bio && spotify_embed_code && artist_img) {
+  // accept user input and post to the DB
+  if (name && artist_bio && spotify_embed_code && artist_img && twitter_embed_code) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, artist_bio, spotify_embed_code, artist_img }),
+      body: JSON.stringify({ name, artist_bio, spotify_embed_code, artist_img, twitter_embed_code }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -23,7 +25,11 @@ const newFormHandler = async (event) => {
   }
 };
 
+// confirm delete and then remove from DB
 const delButtonHandler = async (event) => {
+  var result = confirm("Are you sure you want to delete this project?");
+  if(!result){}
+  else{
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
@@ -38,11 +44,13 @@ const delButtonHandler = async (event) => {
     }
   }
 };
+}
 
 document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+  .querySelectorAll('.delete-button')
+  .forEach(elem => elem
+  .addEventListener('click', delButtonHandler));

@@ -1,11 +1,24 @@
-<div class="text-center bg-repeat-x  bg-white h-fit background_img" style="background-image: url(https://www.pngall.com/wp-content/uploads/4/Concert.png)">
-  <h2 class="font-extrabold font-mono text-xl">{{name}}</h2>
-  <p class="col justify-center font-normal font-sans text-lg">{{artist_bio}}</p>
 
-  <img class = "aspect-auto h-fit artist_img " src={{artist_img}} alt={{name}}>
+<div id="project-page">
+  {{!-- twitter stuff here --}}
+  <div id="twitter">
+    {{{twitter_embed_code}}}
+  </div>
 
-  <div class="font-normal text-md text-gray-900">
+  {{!-- name, bio, creation info, and cloudinary image stuff here --}}
+  <div class="px-2" id="project-info">
+  <h2 class="text-5xl text-center">{{name}}</h2>
+  <p class="text-center">{{artist_bio}}</p>
+  <img src={{artist_img}} alt={{name}}>
+  <p class="text-center">Created by {{user.name}} on {{format_date date_created}}</p>
+  </div>
+
+  {{!-- spotify stuff here --}}
+  <div id="spotify">
     {{{spotify_embed_code}}}
   </div>
-  <p class= "text-sm text-white">Created by {{user.name}} on {{format_date date_created}} {{random_emoji}}</p>
 </div>
+
+{{!-- image for bottom of page --}}
+<img id="background-concert" src="https://res.cloudinary.com/doetzelhn/image/upload/v1639761008/artistify-project/concert-background-new_xf0uje.png" alt="concert crowd">
+

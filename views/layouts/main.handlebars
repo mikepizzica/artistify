@@ -12,7 +12,7 @@
 
 <body class = "bg-red-100">
   <div class="flex-column justify-space-around font-medium px-3 py-2 rounded-lg hover:text-gray-900">
-    <header class="flex  justify-around align-center p-2 wrapper">
+    <header class="flex justify-around align-center p-2 wrapper">
       <h1 class ="stage">
         <div class ="cube bg-red-100">
         <a href="/" class="face face_1 text-black hover:text-gray-600 ">Artistify</a>
@@ -27,13 +27,16 @@
         <a href="/profile" class="font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">profile</a> |
         <button class="no-button font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900" id="logout">logout</button>
         {{else}}
-        <a href="/login" class= "flex end text-center p-3">login</a>
+
+        <a href="/login"><button class="no-button font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">login</button></a>
         {{/if}}
         
       </nav >
     </header>
+
     <div class=" container ">
     <main class=" p-5 columns flex flex-col justify-center relative left-96">
+
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>

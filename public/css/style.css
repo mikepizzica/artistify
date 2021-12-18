@@ -1,11 +1,7 @@
-body {
-  background-color: white;
-}
-header,
+/* styling for the homepage */
 .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
-
 .no-button {
   background: none;
   border: none;
@@ -29,6 +25,8 @@ img {
 .post {
   border-style: dashed;
 }
+
+/* 3d animation styling below */
 
 .stage {
   perspective: 1400px; 
@@ -83,60 +81,72 @@ img {
   transform: translateX(90);
   transition: 5s; }
 
-
-.tooltip {
-  text-decoration:none;
-  position:relative;
-}
- 
-.tooltip span {
-  display:none;
-  -moz-border-radius:6px;
-  -webkit-border-radius:6px;
-  border-radius:6px;
-  color:black;
-  background:white; 
-}
- 
-.tooltip span img {
-  float:left;
-  margin:0px 8px 8px 0;
-}
- 
-.tooltip:hover span {
-  display:block;
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:1000;
-  width:auto;
-  max-width:320px;
-  min-height:128px;
-  border:1px solid black;
-  margin-top:12px;
-  margin-left:32px;
-  overflow:hidden;
-  padding:8px;
-}
-.artist_img{
-  position: relative;
-  left: 44.75%;
-
+/* stylings for the profile & edit page */
+#profile-page {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
 }
 
-.background_img{
-  position: relative;
-  top: 25%;
+#profile-input {
+  /* background-color: green; */
 }
 
-.bands.bands:nth-child(2n){
+#profile-list {
+  /* background-color: white; */
+}
+
+#profile-list > section {
+  /* background-color: blue; */
+}
+
+#profile-input-cloudinary {
+  margin-top: 25px;
+}
+
+
+.bands:nth-child(2n){
   background-color: #70C3FF;
 }
 
-.bands.bands:nth-child(2n-1){
+.bands:nth-child(2n-1){
 background-color: white;
 }
 
-.bands{
 
+
+
+.form-group > label {
+  position: relative;
+  top: 15px;
+}
+
+.form-group > a {
+  position: relative;
+  bottom: 13px;
+}
+
+/* stylings for the project page */
+#project-page {
+  display: flex;
+  justify-content: space-around;
+}
+
+#project-twitter {
+  height:fit-content;
+}
+
+#project-info > img {
+  margin: auto;
+  height: auto;
+  width: 600px;
+}
+
+#project-spotify {
+  /* background-color: red; */
+}
+
+#background-concert {
+  width:100%;
+>>>>>>> main
 }
