@@ -1,11 +1,11 @@
-<div class="text-center grid gap-4 grid-cols-3 grid-rows-3 bg-repeat-x bg-fixed bg-gradient-to-t bg-bottom" style="background-image: url(https://www.pngall.com/wp-content/uploads/4/Concert.png)">
-  <h2>{{name}}</h2>
-  <p>{{artist_bio}}</p>
-  <img class = "aspect-auto h-fit" src={{artist_img}} alt={{name}}>
-  <img src={{artist_img}} alt={{name}}>
-  {{!-- test --}}
-  <div>
+<div class="text-center bg-repeat-x  bg-white h-fit background_img" style="background-image: url(https://www.pngall.com/wp-content/uploads/4/Concert.png)">
+  <h2 class="font-extrabold font-mono text-xl">{{name}}</h2>
+  <p class="col justify-center font-normal font-sans text-lg">{{artist_bio}}</p>
+
+  <img class = "aspect-auto h-fit artist_img " src={{artist_img}} alt={{name}}>
+
+  <div class="font-normal text-md text-gray-900">
     {{{spotify_embed_code}}}
   </div>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p class= "text-sm text-white">Created by {{user.name}} on {{format_date date_created}} {{random_emoji}}</p>
 </div>
