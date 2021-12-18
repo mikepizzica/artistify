@@ -16,13 +16,13 @@
       <div class="form-group">
         <label for="spotify-embed-code">Spotify Embed Code:</label>
         <textarea class="form-input" type="text" id="spotify-embed-code" name="spotify-embed-code" required>{{spotify_embed_code}}</textarea>
-        <a href="https://developer.spotify.com/documentation/widgets/generate/embed/" target="_blank">^Where do I find this? Documentation link</a>
+        <a href="https://developer.spotify.com/documentation/widgets/generate/embed/" target="_blank" class="text-xs">^Where do I find this? Documentation link</a>
       </div>
       {{!-- twitter input goes here --}}
       <div class="form-group">
         <label for="twitter-embed-code">Twitter Embed Code:</label>
         <textarea class="form-input" type="text" id="twitter-embed-code" name="twitter-embed-code" required>{{twitter_embed_code}}</textarea>
-        <a href="https://help.twitter.com/en/using-twitter/embed-twitter-feed" target="_blank">^Where do I find this? Documentation link<br>(Set height to 500px for best experience)</a>
+        <a href="https://help.twitter.com/en/using-twitter/embed-twitter-feed" target="_blank" class="text-xs">^Where do I find this? Documentation link<br>(Set height to 500px for best experience)</a>
       </div>
       <div id="profile-input-cloudinary">
         {{!-- cloudinary upload widget magic happens here --}}
@@ -54,7 +54,7 @@
       </div>
       {{!-- submit edit button --}}
       <div class="form-group">
-        <button type="submit" class="btn hover:bg-green-600 hover:text-green-200 bg-red-100 text-white-700 mx-5 my-10 px-6 py-2 rounded-lg text-5xl" id={{id}}>Edit!</button>
+        <button type="submit" class="btn hover:bg-green-600 hover:text-green-200 text-white-700 mx-5 my-10 px-6 py-2 rounded-lg text-5xl" id={{id}}>Edit!</button>
       </div>
     </form>
   </div>

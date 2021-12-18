@@ -4,8 +4,16 @@
   background-repeat: repeat;
 }
 
+header {
+  margin-left: 200px;
+  margin-right: 60px;
+}
+
+nav {
+  border: solid;
+}
+
 .bands {
-  background-color: #cffafe;
   border: gray;
   border-style: groove;
   }
@@ -42,18 +50,18 @@ img {
 }
 
 .cube {
-  width: 100%;
-  height: 100px;
-  transition: all 10s linear;
-  transform-style: preserve-3d;
- position: relative;
- right:250px;
- bottom: 2.5px;
-  box-sizing: border-box;
-  text-align: center;
-  font-family: Times, serif;
-  font-size: 18pt;
-  animation: spin 3s iteration-count direction fill-mode;
+width: 100%;
+height: 100px;
+transition: all 10s linear;
+transform-style: preserve-3d;
+position: relative;
+right:250px;
+bottom: 2.5px;
+box-sizing: border-box;
+text-align: center;
+font-family: Times, serif;
+font-size: 18pt;
+animation: spin 3s iteration-count direction fill-mode;
 }
 .cube:hover{
   transform-style: preserve-3d;
@@ -140,7 +148,7 @@ img {
 }
 
 #project-spotify {
- background-color: red;
+ /* background-color: red; */
 }
 
 #background-concert {

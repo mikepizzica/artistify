@@ -16,13 +16,13 @@
       <div class="form-group">
         <label for="spotify-embed-code">Spotify Embed Code:</label>
         <textarea class="form-input" type="text" id="spotify-embed-code" name="spotify-embed-code" required></textarea>
-        <a href="https://developer.spotify.com/documentation/widgets/generate/embed/" target="_blank">^Where do I find this? Documentation link</a>
+        <a href="https://developer.spotify.com/documentation/widgets/generate/embed/" target="_blank" class="text-xs">^Where do I find this? Documentation link</a>
       </div>
       {{!-- twitter input goes here --}}
       <div class="form-group">
         <label for="twitter-embed-code">Twitter Embed Code:</label>
         <textarea class="form-input" type="text" id="twitter-embed-code" name="twitter-embed-code" required></textarea>
-        <a href="https://help.twitter.com/en/using-twitter/embed-twitter-feed" target="_blank">^Where do I find this? Documentation link<br>(Set height to 500px for best experience)</a>
+        <a href="https://help.twitter.com/en/using-twitter/embed-twitter-feed" target="_blank" class="text-xs">^Where do I find this? Documentation link<br>(Set height to 500px for best experience)</a>
       </div>
       <div id="profile-input-cloudinary">
         {{!-- cloudinary upload widget magic happens here --}}
@@ -55,7 +55,7 @@
       {{!-- submit edit button --}}
       <div class="form-group">
 
-        <button type="submit" class=" w-16 h-10 mx-2 transition ease-in-out delay-150 bg-green-400 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded">Create!</button>
+        <button type="submit" class="btn hover:bg-green-600 hover:text-green-200 text-white-700 mx-5 my-10 px-6 py-2 rounded-lg text-5xl">Create!</button>
 
       </div>
     </form>
