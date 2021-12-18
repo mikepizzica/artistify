@@ -13,11 +13,11 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body class = "bg-red-100 body">
+<body class = "bg-sky-100 body">
   <div class="flex-column justify-space-around font-medium px-3 py-2 rounded-lg hover:text-gray-900">
-    <header class="flex justify-around align-center p-2 wrapper">
+    <header class="flex justify-evenly align-center p-2 wrapper">
       <h1 class ="stage">
-        <div class ="cube bg-red-100 font-mono text-base rounded-none">
+        <div class ="cube bg-blue-200 font-mono text-base rounded-none">
         <a href="/" class="face face_1 bg-white hover:text-yellow-600 rounded-none border-2 border-black">Artistify</a>
         <a href="/" class="face face_2 bg-white hover:text-blue-600 rounded-none border-2 border-black">Artistify</a>
         <a href="/" class="face face_3 bg-white hover:text-green-600 rounded-none border-2 border-black">Artistify</a>
@@ -30,15 +30,13 @@
         <a href="/profile" class="font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900">profile</a> |
         <button class="no-button font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-white-900" id="logout">logout</button>
         {{else}}
-        <a href="/login"><button class="no-button bg-sky-100 font-medium px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">login</button></a>
+        <a href="/login"><button class="no-button font-medium px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">login</button></a>
         {{/if}}
-        
       </nav >
     </header>
 
-    <div class=" container" >
-    <main class=" p-5 columns flex flex-col justify-center">
-
+    <div class="container" >
+    <main class="p-5 columns flex flex-col justify-center">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
