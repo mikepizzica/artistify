@@ -36,7 +36,7 @@ THEN I am taken to the profile of the matching user.
 ```
 
 ## Link
-https://github.com/mikepizzica/Penn-Collab-Project-2
+https://artistify-project.herokuapp.com/
 
 ## Screenshot
 ![Screenshot of deployed application](./assets/images/artistify-screenshot.png)
