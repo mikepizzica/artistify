@@ -1,4 +1,4 @@
-# Penn-Collab-Project-2-Artistify
+# Artistify
 ## Description
 This application allows users to create or view webpages for music artists. Users can create their own account and give input in order to create these webpages.
 
